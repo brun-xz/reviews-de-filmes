@@ -1,0 +1,273 @@
+
+   body {
+    background-color: black;
+    color: white;
+}
+
+.conteudo {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 50px;
+    margin-left: 50px;
+}
+
+.colunaesquerda {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 20px;
+    flex-shrink: 0;
+
+}
+
+.perfilprimario {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    position: relative;
+    overflow: hidden;
+}
+
+.capa {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 210px;
+    background-image: url('img/capa2.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-radius: 20px 20px 0 0;
+    z-index: 0;
+}
+
+.perfil,
+.valoresseguidores,
+.bio {
+    position: relative;
+    z-index: 1;
+}
+
+.perfil {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    justify-content: flex-start;
+}
+.informacao {
+    display: flex;
+    align-items: center;
+    gap: 0px;
+    flex-direction: row;
+    flex-direction: column;
+}
+
+.informacao p {
+    margin-left: -90px;
+    font-size: 16px;
+    margin-top: 0px;
+}
+
+.perfil img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 4px solid #2e2e2e;
+}
+
+.perfil h1 {
+    margin: 0;
+    font-size: 32px;
+}
+
+
+.valoresseguidores {
+    display: flex;
+    align-items: center;
+    gap: 26px;
+    font: 400 20px Arial, sans-serif;
+    font-size: 11px;
+    margin-bottom: -15px;
+}
+
+.seguidores {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    font-size: 7px;
+    letter-spacing: 1px;
+}
+
+.linhainferior {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 20px;
+}
+
+.bio {
+    font-size: 13px;
+    margin-top: -10px;
+    width: 250px;
+}
+
+.bio p {
+    margin-top: -14px;
+}
+
+.perfilsecundario {
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 0px;
+}
+
+.TopFilmes {
+    font-size: 13px;
+    margin-top: -20px;
+    flex-direction: column;
+}
+.TopFilmes ol {
+    margin-top: -10px;
+    font-size: 13px;
+    flex-direction: column;
+    margin-bottom: -20px;
+    margin-left: -20px;
+}
+
+.generos {
+    font-size: 13px;
+    margin-top: 40px;
+}
+.generos ul {
+    margin-top: -10px;
+    font-size: 13px;
+    margin-left: -20px;
+}
+
+/*painel de filmes e indicacoes*/
+
+.painel {
+   width: 900px;
+   min-height: 400px;
+   background-color: #111111;
+   border: 8px;
+   border-style: solid;
+   border-color: #2e2e2e;
+   border-radius: 20px;
+   padding: 10px;
+   margin: 0px;
+   box-sizing: border-box;
+   margin-left: 400px;
+}
+
+.filmes {
+    display: flex;
+    gap: 20px;
+    overflow-x: auto;
+    flex-shrink: 0;
+    margin-top: -30px;
+}
+
+
+.reviews img {
+    width: 100px;
+    height: 190px;
+    object-fit: cover;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+}
+
+
+.posters {
+    display: flex;
+    gap: 10px;
+    overflow-x: auto;
+    flex-shrink: 0;
+}
+
+.posters img {
+    width: 100px;
+    height: 190px;
+    object-fit: cover;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+}
+
+.carrossel {
+    position: relative;
+    width: 100%;`
+}
+
+
+/* remove scrollbar */
+.filmes, .posters {
+    display: flex;
+    gap: 12px;
+    overflow-x: auto;
+    overflow-y: hidden;
+    scroll-behavior: smooth;
+    scrollbar-width: none; 
+    padding-bottom: 20px 8px;
+}
+
+.filmes::-webkit-scrollbar, .posters::-webkit-scrollbar {
+    display: none; 
+}
+
+/*setas*/
+.seta {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(71, 4, 4, 0.8);
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    font-size: 24px;
+    cursor: pointer;
+    transition: 0.3s;
+    padding: 0px;
+    cursor: pointer;
+    z-index: 10;
+
+}
+
+.seta:hover {
+    background-color: #555;
+    transform: translateY(-50%) scale(1.15);
+}
+
+.seta.esquerda {
+    left: 0px;
+}
+
+.seta.direita {
+    right: 0px;
+}
+
+/* ZOOM DOS PÔSTERES */
+.reviews img,
+.posters img {
+    transition: transform 0.3s ease;
+    cursor: pointer;
+}
+
+.reviews img:hover,
+.posters img:hover {
+    transform: scale(1.12);
+    position: relative;
+    z-index: 5;
+}
+
+
+
+
+
